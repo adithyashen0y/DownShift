@@ -21,3 +21,7 @@ strong = groq.chat.completions.create(
     messages=[{"role": "user", "content": prompt}],
 )
 print("strong ->", strong.choices[0].message.content)
+
+print("\n--- token usage ---")
+print("cheap :", cheap.usage_metadata)
+print("strong:", strong.usage)
